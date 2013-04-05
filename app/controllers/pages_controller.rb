@@ -16,10 +16,7 @@ class PagesController < ApplicationController
   def index
     #@pages = Page.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @pages }
-    end
+    respond_to :html
   end
 
   # GET /pages/1
