@@ -48,6 +48,8 @@ Tehnoles3::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( ckeditor/init.js ckeditor/ckeditor.js ckeditor/skins/moono/dialog_iequirks.css )
 
+  config.assets.precompile += [ /.*ckeditor.js/, /.*config.js/, /.*ru.js/, /.*editor.css/, /.*plugin.js/, /.*en.js/, /.*contents.css/, /.*default.js/ ]
+
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
