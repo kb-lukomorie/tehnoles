@@ -1,4 +1,15 @@
 Tehnoles3::Application.routes.draw do
+  resources :pages
+
+
+  mount Ckeditor::Engine => '/ckeditor'
+
+
+  root to: 'pages#index'
+  get 'eco' => 'pages#eco', as: :eco
+  get 'repair' => 'pages#repair', as: :repair
+  get 'development' => 'pages#development', as: :development
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

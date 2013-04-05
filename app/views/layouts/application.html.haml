@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Технолес
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
+      %h1= link_to 'Технолес', root_path
+    .container
+      - unless params[:action] == 'index'
+        %ul.nav.nav-tabs
+          - @pages.each do |page|
+            %li{class: ('active' if params[:action] == page.name)}
+              = link_to page.title, "/#{page.name}"
+      = yield
