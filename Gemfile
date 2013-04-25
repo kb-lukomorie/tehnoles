@@ -15,6 +15,8 @@ gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 
+gem 'fancybox2-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

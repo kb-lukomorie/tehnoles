@@ -1,3 +1,5 @@
 %h3
   = @page.title
 = simple_format @page.content
+
+= link_to 'edit', edit_page_path(@page)

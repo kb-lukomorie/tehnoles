@@ -12,5 +12,6 @@
  *= require twitter/bootstrap
  *= require formtastic
  *= require formtastic-bootstrap
+ *= require fancybox
  *= require_tree .
  */

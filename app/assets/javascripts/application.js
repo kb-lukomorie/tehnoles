@@ -14,4 +14,14 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require ckeditor/init
+//= require fancybox
 //= require_tree .
+
+$(document).ready(function() {
+    $("a.fancybox").fancybox({
+        nextEffect: 'elastic',
+        prevEffect: 'elastic',
+        nextSpeed: 'slow',
+        prevSpeed: 'slow'
+    });
+});
