@@ -1,4 +1,6 @@
 Tehnoles3::Application.routes.draw do
+  root to: 'pages#index'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -12,15 +14,12 @@ Tehnoles3::Application.routes.draw do
 
   #resources :photos
 
-
-
   resources :pages
 
 
   mount Ckeditor::Engine => '/ckeditor'
 
 
-  root to: 'pages#index'
   get 'eco' => 'pages#eco', as: :eco
   get 'repair' => 'pages#repair', as: :repair
   get 'development' => 'pages#development', as: :development
