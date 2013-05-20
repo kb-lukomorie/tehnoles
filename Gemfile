@@ -9,6 +9,7 @@ gem 'rails', '3.2.13'
 gem "mongoid"
 
 gem 'haml-rails'
+gem 'slim'
 gem "ckeditor"
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'mini_magick'
