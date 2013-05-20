@@ -13,9 +13,9 @@
     .container
       - unless params[:action] == 'index'
         %ul.nav.nav-tabs
-          - @pages.each do |page|
-            %li{class: ('active' if params[:action] == page.name)}
-              = link_to page.title, "/#{page.name}"
+          - WORK_TYPES.each do |work_type|
+            %li{class: ('active' if params[:action] == work_type[0].to_s)}
+              = link_to work_type[1], "/#{work_type[0]}"
       = yield
       %hr
       .footer

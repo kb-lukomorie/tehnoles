@@ -9,7 +9,6 @@ ActiveAdmin.register WorkItem do
 
     f.has_many :photos do |ff|
       ff.input :title
-      #ff.input :image
       ff.input :image, as: :file, hint: ff.template.image_tag(ff.object.image.url(:thumb))
       ff.input :_destroy, as: :boolean, required: false, label: 'Remove image'
     end
@@ -17,11 +16,13 @@ ActiveAdmin.register WorkItem do
   end
 
   show do |work_item|
+    h3 work_item.name
     panel 'Фотографии' do
-
-      work_item.photos.each do |photo|
-        div do
-          image_tag photo.image.url(:thumb)
+      ul do
+        work_item.photos.each do |photo|
+          li do
+            image_tag photo.image.url(:thumb)
+          end
         end
 
       end
