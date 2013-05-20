@@ -10,7 +10,8 @@ gem "mongoid"
 
 gem 'haml-rails'
 gem "ckeditor"
-gem 'mongoid-paperclip', require: 'mongoid_paperclip'
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
+gem 'mini_magick'
 
 gem 'formtastic'
 gem 'formtastic-bootstrap'
@@ -46,3 +47,8 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'activeadmin-mongoid', github: 'elia/activeadmin-mongoid', branch: 'latest'
+gem 'devise'
+
+gem 'russian'

@@ -1,0 +1,12 @@
+ru:
+  activerecord:
+    models:
+      admin_user: Админ
+      page: Страница
+      photo: Фото
+      work_item: Вид работ
+    attributes:
+      work_item:
+        work_type: Вид услуг
+      photo:
+        title: Примечание

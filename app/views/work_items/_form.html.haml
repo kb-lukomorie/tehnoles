@@ -1,0 +1,10 @@
+= semantic_form_for @work_item do |f|
+  = f.inputs do
+    = f.input :work_type, collection: @pages.map {|p| [p.title, p.name]}
+    = f.input :name
+  = f.actions
+
+-#= form_for Photo.new do |f|
+= form_for new_work_item_photo_path(@work_item), html: {id: 'new_photo'} do |f|
+  = f.label :image, "Upload photo:"
+  = f.file_field :image, multiple: true, name: "photo[image]"
