@@ -1,6 +1,0 @@
-%h2
-  Наша компания предлагает
-%ul#main
-  - @pages.each do |page|
-    %li{class: page.name}>
-      = link_to page.title, "/#{page.name}"
