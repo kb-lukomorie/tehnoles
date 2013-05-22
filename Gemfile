@@ -11,8 +11,7 @@ gem "mongoid"
 gem 'haml-rails'
 gem 'slim'
 gem "ckeditor"
-gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
-gem 'mini_magick'
+gem "mongoid-paperclip", require: "mongoid_paperclip"
 
 gem 'formtastic'
 gem 'formtastic-bootstrap'

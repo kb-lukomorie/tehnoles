@@ -13,24 +13,21 @@
       %aside.pull-left
         .contact-header
           %h4.contacts Контакты
-        %p
-        (4212) 602-043, +7-962-220-20-43
-        %p
-          (4212) 246-673,  +7-914-159-66-73
-        %p
-          Email:
-          = link_to 'tehnoles10@mail.ru', 'mailto:tehnoles10@mail.ru'
+          %p
+            (4212) 602-043, +7-962-220-20-43
+          %p
+            (4212) 246-673,  +7-914-159-66-73
+          %p
+            Email:
+            = link_to 'tehnoles10@mail.ru', 'mailto:tehnoles10@mail.ru'
 
-      / %h1
-      /   = link_to 'Технолес', root_path
       .main-content
         - unless params[:action] == 'index'
           %ul.nav.nav-tabs
-            - @pages.each do |page|
-              %li{class: ('active' if params[:action] == page.name)}
-                = link_to page.title, "/#{page.name}"
-        = yield
-      %hr
+            - WORK_TYPES.each do |work_type|
+              %li{class: ('active' if params[:action] == work_type[0].to_s)}
+                = link_to work_type[1], "/#{work_type[0]}"
+      = yield
     / .footer
     /   %h4 Контакты
     /   %p

@@ -4,20 +4,11 @@ Tehnoles3::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  get "photos/create"
-
-  get "photos/destroy"
-
-  resources :work_items do
-    resources :photos
-  end
+  #resources :work_items
 
   #resources :photos
 
-  resources :pages
-
-
-  mount Ckeditor::Engine => '/ckeditor'
+  #mount Ckeditor::Engine => '/ckeditor'
 
 
   get 'eco' => 'pages#eco', as: :eco

@@ -6,6 +6,36 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Page.create "content"=>"<ol>\r\n\t<li>Изготовление, монтаж, ремонт металлических конструкций</li>\r\n\t<li>Установка дверных и оконных блоков</li>\r\n\t<li>Полы (деревянные, бетонные, ламинат, линолеум и т.д.)</li>\r\n\t<li>Штукатурно-малярные работы</li>\r\n\t<li>Сантехнические работы</li>\r\n\t<li>Земляные работы</li>\r\n\t<li>фундаменты</li>\r\n\t<li>Кровли</li>\r\n\t<li>Фасады</li>\r\n</ol>\r\n", "name"=>"repair", "title"=>"Ремонтно-строительные работы"
-Page.create "name"=>"development", "title"=>"Малоэтажное строительство", "content"=>"<ol>\r\n\t<li style=\"margin-right: 0cm;\">Земляные работы</li>\r\n\t<li style=\"margin-right: 0cm;\">Фундаменты</li>\r\n\t<li style=\"margin-right: 0cm;\">Сети (водоснабжение, канализация, электричество)</li>\r\n\t<li style=\"margin-right: 0cm;\">Гидроизоляция</li>\r\n\t<li style=\"margin-right: 0cm;\">шумо-теплоизоляция</li>\r\n\t<li style=\"margin-right: 0cm;\">бетонные и каменные работы</li>\r\n\t<li style=\"margin-right: 0cm;\">Кровельные работы</li>\r\n\t<li style=\"margin-right: 0cm;\">Устройство внутренних инженерных систем</li>\r\n\t<li style=\"margin-right: 0cm;\">Облицовочные работы</li>\r\n\t<li style=\"margin-right: 0cm;\">Ограждения (заборы)</li>\r\n</ol>\r\n"
-Page.create "name"=>"eco", "title"=>" Реализация товаров из Японии", "content"=>"<ol>\r\n\t<li style=\"margin-right: 0cm;\">Ионизатор активатор воды</li>\r\n\t<li style=\"margin-right: 0cm;\">Косметический прибор</li>\r\n\t<li style=\"margin-right: 0cm;\">Бады</li>\r\n</ol>\r\n"
+# ['repair', 'Ремонтно-строительные работы']
+
+WorkItem.destroy_all
+
+repair_items = ['Изготовление, монтаж, ремонт металлических конструкций',
+'Установка дверных и оконных блоков',
+'Полы (деревянные, бетонные, ламинат, линолеум и т.д.)',
+'Штукатурно-малярные работы',
+'Сантехнические работы',
+'Земляные работы',
+'Фундаменты',
+'Кровли',
+'Фасады']
+repair_items.each do |name|
+  WorkItem.create work_type: 'repair', name: name
+end
+
+# ['development', 'Малоэтажное строительство']
+
+dev_items = ["Земляные работы", "Фундаменты", "Сети (водоснабжение, канализация, электричество)",
+             "Гидроизоляция", "Шумо-теплоизоляция", "Бетонные и каменные работы", "Кровельные работы", "
+             Устройство внутренних инженерных систем", "Облицовочные работы", "Ограждения (заборы)"]
+
+dev_items.each do |name|
+  WorkItem.create work_type: 'development', name: name
+end
+# ['eco', 'Реализация товаров из Японии']
+
+eco_items = ["Ионизатор активатор воды", "Косметический прибор", "Бады"]
+
+eco_items.each do |name|
+  WorkItem.create work_type: 'eco', name: name
+end

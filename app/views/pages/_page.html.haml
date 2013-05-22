@@ -1,0 +1,6 @@
+%h3= WORK_TYPES[action_name.to_sym]
+
+%p
+  %ol
+    - @work_items.each do |item|
+      %li= item.name
