@@ -13,6 +13,8 @@ gem 'slim'
 gem "ckeditor"
 gem "mongoid-paperclip", require: "mongoid_paperclip"
 
+gem 'paperclip-dropbox'
+
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 
@@ -50,5 +52,6 @@ gem 'jquery-rails'
 
 gem 'activeadmin-mongoid', github: 'elia/activeadmin-mongoid', branch: 'latest'
 gem 'devise'
+gem 'devise-i18n'
 
 gem 'russian'

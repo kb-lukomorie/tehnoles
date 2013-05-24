@@ -5,8 +5,16 @@ ru:
       page: Страница
       photo: Фото
       work_item: Вид работ
+  mongoid:
+    models:
+      admin_user: Админ
+      page: Страница
+      photo: Фото
+      work_item: Вид работ
     attributes:
       work_item:
         work_type: Вид услуг
+        name: Наименование
       photo:
         title: Примечание
+        image: Файл с фотографией
