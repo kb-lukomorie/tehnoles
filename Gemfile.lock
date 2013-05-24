@@ -183,11 +183,8 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-<<<<<<< HEAD
     subexec (0.2.3)
     temple (0.6.4)
-=======
->>>>>>> master
     thor (0.18.1)
     tilt (1.4.1)
     treetop (1.4.12)
