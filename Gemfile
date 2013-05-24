@@ -12,6 +12,8 @@ gem 'haml-rails'
 gem "ckeditor"
 gem "mongoid-paperclip", require: "mongoid_paperclip"
 
+gem 'paperclip-dropbox'
+
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 
