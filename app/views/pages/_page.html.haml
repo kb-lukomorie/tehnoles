@@ -7,4 +7,5 @@
       - if item.photos.present?
         .photos
           - item.photos.each do |photo|
-            = link_to image_tag(photo.image.url(:thumb)), photo.image.url, class: 'fancybox', rel: 'photos'
+            = link_to image_tag(photo.image.url(:thumb)), photo.image.url,
+                                                          class: 'fancybox', rel: 'photos', title: item.name

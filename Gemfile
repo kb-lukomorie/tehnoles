@@ -51,5 +51,6 @@ gem 'jquery-rails'
 
 gem 'activeadmin-mongoid', github: 'elia/activeadmin-mongoid', branch: 'latest'
 gem 'devise'
+gem 'devise-i18n'
 
 gem 'russian'

@@ -10,7 +10,7 @@ ActiveAdmin.register WorkItem do
     f.has_many :photos do |ff|
       ff.input :title
       ff.input :image, as: :file, hint: ff.template.image_tag(ff.object.image.url(:thumb))
-      ff.input :_destroy, as: :boolean, required: false, label: 'Remove image'
+      ff.input :_destroy, as: :boolean, required: false, label: 'Удалить фотографию'
     end
     f.actions
   end

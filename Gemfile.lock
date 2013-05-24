@@ -81,6 +81,7 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    devise-i18n (0.8.3)
     dropbox-sdk (1.5.1)
       json
     erubis (2.7.0)
@@ -206,6 +207,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 3.2.1)
   devise
+  devise-i18n
   fancybox2-rails
   formtastic
   formtastic-bootstrap
