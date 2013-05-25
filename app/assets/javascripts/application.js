@@ -24,4 +24,10 @@ $(document).ready(function() {
         nextSpeed: 'slow',
         prevSpeed: 'slow'
     });
+    $('.additional-list').hide();
+    $(".show-link").on('click', function (e) {
+      e.preventDefault();
+      $(this).hide();
+      $(this).closest('ol').find('.additional-list').slideDown();
+    });
 });

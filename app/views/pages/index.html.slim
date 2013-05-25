@@ -1,5 +1,31 @@
+aside.pull-left
+  .contact-header.rounded.index-label Контакты
+  .description-list
+    p (4212) 602-043, +7-962-220-20-43
+    p (4212) 246-673,  +7-914-159-66-73
+    p
+      ' Email:
+      = link_to 'tehnoles10@mail.ru', 'mailto:tehnoles10@mail.ru'
 h2.center Наша компания предлагает
-ul#main
+ul.main-content#main
   - WORK_TYPES.each do |work_type|
-    li class=work_type[0]
+    - work_items = WorkItem.where(work_type: work_type[0])
+    li.rounded.clickable.index-label class=work_type[0]
       = link_to work_type[1], work_type[0]
+    .description-list
+
+      ol
+        - work_items.limit(5).each do |item|
+          - if item.photos.present?
+            .image-list 
+              - item.photos.limit(5).each do |photo|
+                = link_to image_tag(photo.image.url(:thumb)), photo.image.url, class: 'fancybox', rel: 'photos', title: item.name
+          li = item.name
+        div.additional-list
+          - work_items.from(5).each do |item|
+            li = item.name
+      
+        = link_to "еще...", "#", class: 'show-link' if work_items.length > 5
+      = link_to "Подробнее", work_type[0], class: 'more'
+      / - work_items.each do |item|
+      /   li= item.name

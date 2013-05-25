@@ -5,20 +5,35 @@
   transition: $transition
 
 
+@mixin scale($ratio) 
+  -webkit-transform: scale($ratio)
+  -moz-transform: scale($ratio)
+  -ms-transform: scale($ratio)
+  -o-transform: scale($ratio)
+  transform: scale($ratio)
+
+aside
+  margin-top: 50px
+.image-list img
+  margin: 7px
+  box-shadow: 1px 1px 4px #333
+  +transition(all .2s ease-in-out)
+  &:hover
+    +scale(1.2)
+    
 img.thumb
   height: 70px
+.index-label
+  text-align: center
+  font-size: 18px
+  font-weight: bold
+  a
+    color: #333
+    vertical-align: middle
+    text-shadow: 1px 1px 2px #eee
+    text-decoration: none
 ul#main
   list-style-type: none
-  .development, .repair, .eco
-    display: inline-block
-    text-align: center
-    a
-      vertical-align: middle
-      color: #333
-      text-shadow: 1px 1px 2px #eee
-      font-size: 18px
-      font-weight: bold
-      display: block
   .development, .repair, .eco
     width: 100%
   .eco
@@ -28,15 +43,35 @@ ul#main
   .repair
     background-image: image-url('rep-bg.jpg')
 
-.rounded-link
+.rounded
   border-radius: 5px
+.clickable
   opacity: .8
   box-shadow: 0 0 5px rgb(94, 57, 11)
-  +transition(all .1s ease-in-out)
+  +transition(all .2s ease-in-out)
   &:active
     box-shadow: inset 2px 2px 5px rgb(94, 57, 11)
-
   &:hover
     opacity: 1
-  a
-    text-decoration: none
+.description-list
+  position: relative
+  background-color: rgba(229, 239, 240, 0.72)
+  margin: 2px 0 20px 0
+  border-radius: 5px
+  box-shadow: 1px 1px 2px #EDF5AD
+  padding: 5px
+  text-shadow: 1px 1px 1px #fff
+  .more
+    position: absolute
+    bottom: 5px
+    right: 5px
+    font-weight: bold
+    color: #888
+.contact-header
+  padding: 1px
+  box-shadow: 0 0 3px rgb(158, 138, 114)
+  background-image: linear-gradient(bottom, rgb(237,226,14) 0%, rgb(188,199,36) 58%)
+  background-image: -o-linear-gradient(bottom, rgb(237,226,14) 0%, rgb(188,199,36) 58%)
+  background-image: -moz-linear-gradient(bottom, rgb(237,226,14) 0%, rgb(188,199,36) 58%)
+  background-image: -webkit-linear-gradient(bottom, rgb(237,226,14) 0%, rgb(188,199,36) 58%)
+  background-image: -ms-linear-gradient(bottom, rgb(237,226,14) 0%, rgb(188,199,36) 58%)
