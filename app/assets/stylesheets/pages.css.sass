@@ -12,6 +12,20 @@
   -o-transform: scale($ratio)
   transform: scale($ratio)
 
+.phone
+  position: absolute
+  top: 0
+  right: 0
+  color: rgb(121, 120, 114)
+  font: 14px Arial,Helvetica,sans-serif
+  line-height: 24px
+  width: 220px
+  span
+    font-size: 24px
+    font-weight: bold
+    font-style: italic
+  img
+    float: left
 aside
   margin-top: 50px
 .image-list img
@@ -23,15 +37,15 @@ aside
     
 img.thumb
   height: 70px
+
 .index-label
   text-align: center
   font-size: 18px
   font-weight: bold
-  a
-    color: #333
-    vertical-align: middle
-    text-shadow: 1px 1px 2px #eee
-    text-decoration: none
+  color: #333
+  text-shadow: 1px 1px 2px #eee
+  text-decoration: none
+
 ul#main
   list-style-type: none
   .development, .repair, .eco
@@ -43,8 +57,31 @@ ul#main
   .repair
     background-image: image-url('rep-bg.jpg')
 
+.main-photo, .description-list
+  display: inline-block
+  vertical-align: top
+.main-photo
+  box-shadow: 0px 0px 6px #aaa
+  img
+    width: 200px
+    height: auto
+
+.main-description
+  position: relative
+  background-color: rgba(229, 239, 240, 0.72)
+  border-radius: 5px
+  box-shadow: 1px 1px 2px #EDF5AD
+  padding: 5px
+  .more
+    position: absolute
+    bottom: 5px
+    right: 5px
+    font-weight: bold
+    color: #888
+
 .rounded
   border-radius: 5px
+
 .clickable
   opacity: .8
   box-shadow: 0 0 5px rgb(94, 57, 11)
@@ -54,19 +91,7 @@ ul#main
   &:hover
     opacity: 1
 .description-list
-  position: relative
-  background-color: rgba(229, 239, 240, 0.72)
-  margin: 2px 0 20px 0
-  border-radius: 5px
-  box-shadow: 1px 1px 2px #EDF5AD
-  padding: 5px
   text-shadow: 1px 1px 1px #fff
-  .more
-    position: absolute
-    bottom: 5px
-    right: 5px
-    font-weight: bold
-    color: #888
 .contact-header
   padding: 1px
   box-shadow: 0 0 3px rgb(158, 138, 114)

@@ -8,8 +8,26 @@
   %body
     .container
       %header
-        = link_to image_tag('tehles.png'), root_path
+        .phone
+          = image_tag 'phone_ico.png'
+          .contact
+            +7 (4212)
+            %span 602-043
+            %br
+            +7 (4212)
 
+            %span 246-673
+          / .contacts
+          /   .phone 
+          /     (4212)
+          /     %span.big-digit 602-043
+
+          /   .phone 
+          /     (4212)
+          /     %span.big-digit 246-673
+
+        = link_to image_tag('tehles.png'), root_path
+        / .clear
       - unless params[:action] == 'index'
         %ul.nav.nav-tabs
           - WORK_TYPES.each do |work_type|
