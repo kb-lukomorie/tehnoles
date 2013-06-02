@@ -1,4 +1,4 @@
-%h3= WORK_TYPES[action_name.to_sym]
+%h3.type-title= WORK_TYPES[action_name.to_sym]
 
 %p
   %ol
@@ -7,5 +7,6 @@
       - if item.photos.present?
         .photos
           - item.photos.each do |photo|
-            = link_to image_tag(photo.image.url(:thumb)), photo.image.url,
+            .photo= link_to image_tag(photo.image.url(:thumb)), photo.image.url,
                                                           class: 'fancybox', rel: 'photos', title: item.name
+          .clearfix
